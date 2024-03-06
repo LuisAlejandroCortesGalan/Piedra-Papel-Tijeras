@@ -1,0 +1,60 @@
+body {
+    background-image: url(/img/assets/Piedra\,-papel-o-tijera_350x150.jpg);
+}
+
+.centro {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid black;
+    border-radius: 2%;
+    width: 550px;
+    height: 460px;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin: 150px auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+form {
+    font-size: 60px;
+    display: flex;
+    width: 480px;
+    justify-content: space-around;
+}
+
+.radio {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    width: 400px;
+    padding: 10px;
+    background-color:rgb(3, 101, 15);
+    border-radius: 5px;
+    border: 2px solid black;
+    color: white;
+    font-size: 20px;
+    box-shadow: 10px 10px 10px 1px black;
+    margin-top: -70px;
+}
+
+.buttonNombre {
+    background-color: rgba(189, 150, 7, 0.604);
+    color: black;
+    font-size: 18px;
+    margin-bottom: -50px;
+}
