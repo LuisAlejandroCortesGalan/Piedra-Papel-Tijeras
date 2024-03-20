@@ -8,13 +8,12 @@
 </head>
 <body>
     <header>
-
     </header>
     <main>
         <div class="centro">
             <h2>PIEDRA, PAPEL, TIJERAS</h2>
-            <button class="buttonNombre">INTRODUCE TU NOMBRE</button>
-            <form action="get">
+            <button class="buttonNombre" onclick="reiniciar()">REINICIAR</button>
+            <form action="get" id="formulario">
                 <input type="radio" name="radio" id="piedra" value="piedra">
                 <label for="piedra">✊</label>
 
@@ -24,13 +23,15 @@
                 <input type="radio" name="radio" id="tijeras" value="tijeras">
                 <label for="piedra">✌️</label>
             </form>
-            <button onclick="game()">¡ JUGAR !</button>
+            <button onclick="game()" type="reset">¡ JUGAR !</button>
+            <div id="resultado">
 
+            </div>
         </div>
     </main>
     <footer>
-        
+
     </footer>
-    <script src="js/game_0.1.js"></script>
+    <script src="js/game_0.2.js"></script>
 </body>
 </html>

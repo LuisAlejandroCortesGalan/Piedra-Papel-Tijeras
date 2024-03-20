@@ -58,3 +58,9 @@ button {
     font-size: 18px;
     margin-bottom: -50px;
 }
+
+#resultado p{
+    margin-top: -50px;
+    font-size: 2rem;
+    height: auto;
+}

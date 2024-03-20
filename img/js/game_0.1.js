@@ -71,9 +71,8 @@ Empates : ${empates}
 derrotas : ${derrotas}
 ` 
 
-alert(marcador);
+alert(marcador); 
 }
-
 
 
 function aleatorio(min, max) {
