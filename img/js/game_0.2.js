@@ -1,7 +1,8 @@
 let formulario = document.getElementById('formulario');
 let eleccionUsuario = "";
 let guardarResultado = document.getElementById('resultado');
-let mostrar = '';
+let guardarResultado1 = document.getElementById('resultado1');
+let mostrar = "";
 let img = '';
 let audio = '';
 
@@ -27,7 +28,6 @@ function aleatorio(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
 
-
 //aqui creamos la eleccion aleatoria del PC, enlazando 1,2,3 a piedra, papel y tijeras
 let eleccionPC = aleatorio(1, 4);
 if (eleccionPC) {
@@ -44,46 +44,31 @@ if (eleccionPC) {
 // console.log("el usuario elige:", eleccionUsuario);
 
 
-
-var mensajeElement = document.createElement('p');
-mensajeElement.textContent = "Has ganado!";
-
-var imagenElement = document.createElement('img');
-imagenElement.src = "copa_500px.jpg";
-
-var audioElement = document.createElement('audio');
-audioElement.src = "assets/aplausos.mp3";
-audioElement.autoplay = true;
-
-
 if (eleccionPC == eleccionUsuario) {
     mostrar = '<p>Has empatado!</p>';
     img = '<img src="estrecharme-mano_500px.jpg">'
     audio = '<audio src="assets/alarma.mp3" autoplay></audio>'
-    console.log("empate!!");
-    guardarResultado.innerHTML += mostrar + img + audio;
+    // console.log("empate!!");
+    guardarResultado.innerHTML = mostrar + img + audio;
     empates++;
 } else if (eleccionUsuario == "piedra" && eleccionPC == "tijeras" || eleccionUsuario == "papel" && eleccionPC == "piedra" || eleccionUsuario == "tijeras" && eleccionPC == "papel") {
     mostrar = '<p>Has ganado!</p>'
     img = '<img src="copa_500px.jpg">'
     audio = '<audio src="assets/aplausos.mp3" autoplay></audio>'
-    console.log("ganamos!!!!");
-    guardarResultado.innerHTML += mostrar + img + audio;
+    // console.log("ganamos!!!!");
+    guardarResultado.innerHTML = mostrar + img + audio;
     ganadas++;
 } else if (eleccionUsuario == "piedra" && eleccionPC == "papel" || eleccionUsuario == "tijeras" && eleccionPC == "piedra" || eleccionUsuario == "papel" && eleccionPC == "tijeras") {
     mostrar = '<p>Has perdido!</p>'
     img = '<img src="malament_500px.jpg">'
     audio = '<audio src="assets/gameover.mp3" autoplay></audio>'
-    console.log("perdemos!!!!");
-    guardarResultado.innerHTML += mostrar + img + audio;
+    // console.log("perdemos!!!!");
+    guardarResultado.innerHTML = mostrar + img + audio;
     perdidas++;
 }
 
-
 let marcador = `<p> Victorias : ${ganadas} | Empates : ${empates} | Derrotas : ${perdidas} </p>`
-guardarResultado.innerHTML = marcador;
-
-
+guardarResultado1.innerHTML = marcador;
 
 }
 
@@ -93,5 +78,6 @@ function reiniciar() {
     perdidas = 0;
     empates = 0;
     let marcador = `<p> Victorias : ${ganadas} | Empates : ${empates} | Derrotas : ${perdidas} </p>`
-    guardarResultado.innerHTML = marcador;
+    guardarResultado1.innerHTML = "";
+    guardarResultado.innerHTML = "";
 }
